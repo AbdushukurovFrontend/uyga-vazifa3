@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/stayle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <table class="responsive-table">
+        <thead class="responsive-table__head">
+          <tr class="responsive-table__row">
+            <th
+              class="responsive-table__head__title responsive-table__head__title--name"
+            >
+              Name
+              <svg
+                version="1.1"
+                class="up-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+              >
+                <path
+                  d="M374.176,110.386l-104-104.504c-0.006-0.006-0.013-0.011-0.019-0.018c-7.818-7.832-20.522-7.807-28.314,0.002c-0.006,0.006-0.013,0.011-0.019,0.018l-104,104.504c-7.791,7.829-7.762,20.493,0.068,28.285    c7.829,7.792,20.492,7.762,28.284-0.067L236,68.442V492c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V68.442l69.824,70.162c7.792,7.829,20.455,7.859,28.284,0.067C381.939,130.878,381.966,118.214,374.176,110.386z"
+                />
+              </svg>
+            </th>
+            <th
+              class="responsive-table__head__title responsive-table__head__title--status"
+            >
+              Status
+            </th>
+            <th
+              class="responsive-table__head__title responsive-table__head__title--types"
+            >
+              Types
+            </th>
+            <th
+              class="responsive-table__head__title responsive-table__head__title--update"
+            >
+              Last updated at
+            </th>
+            <th
+              class="responsive-table__head__title responsive-table__head__title--country"
+            >
+              Country
+            </th>
+          </tr>
+        </thead>
+        <!-- Responsive Table Body Section -->
+        <tbody class="responsive-table__body" id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const headTitleName = document.querySelector(
+        ".responsive-table__head__title--name"
+      );
+      const headTitleStatus = document.querySelector(
+        ".responsive-table__head__title--status"
+      );
+      const headTitleTypes = document.querySelector(
+        ".responsive-table__head__title--types"
+      );
+      const headTitleUpdate = document.querySelector(
+        ".responsive-table__head__title--update"
+      );
+      const headTitleCountry = document.querySelector(
+        ".responsive-table__head__title--country"
+      );
+
+      // Select tbody text from Dom
+      const bodyTextName = document.querySelectorAll(
+        ".responsive-table__body__text--name"
+      );
+      const bodyTextStatus = document.querySelectorAll(
+        ".responsive-table__body__text--status"
+      );
+      const bodyTextTypes = document.querySelectorAll(
+        ".responsive-table__body__text--types"
+      );
+      const bodyTextUpdate = document.querySelectorAll(
+        ".responsive-table__body__text--update"
+      );
+      const bodyTextCountry = document.querySelectorAll(
+        ".responsive-table__body__text--country"
+      );
+
+      // Select all tbody table row from Dom
+      const totalTableBodyRow = document.querySelectorAll(
+        ".responsive-table__body .responsive-table__row"
+      );
+
+      // Get thead titles and append those into tbody table data items as a "data-title" attribute
+      for (let i = 0; i < totalTableBodyRow.length; i++) {
+        bodyTextName[i].setAttribute("data-title", headTitleName.innerText);
+        bodyTextStatus[i].setAttribute("data-title", headTitleStatus.innerText);
+        bodyTextTypes[i].setAttribute("data-title", headTitleTypes.innerText);
+        bodyTextUpdate[i].setAttribute("data-title", headTitleUpdate.innerText);
+        bodyTextCountry[i].setAttribute(
+          "data-title",
+          headTitleCountry.innerText
+        );
+      }
+
+      const tbody10 = document.getElementById("tbody");
+      // 1 qator
+      const tr10 = document.createElement("tr");
+      const td10 = document.createElement("td");
+      const img10 = document.createElement("img");
+      const div10 = document.createElement("div");
+      const span10 = document.createElement("span");
+      const div11 = document.createElement("div");
+      const td11 = document.createElement("td");
+      const div12 = document.createElement("div");
+      const td12 = document.createElement("td");
+      const div13 = document.createElement("div");
+      const td13 = document.createElement("td");
+      const div14 = document.createElement("div");
+      const td14 = document.createElement("td");
+
+      // 2 qator
+      const tr20 = document.createElement("tr");
+      const td20 = document.createElement("td");
+      const img20 = document.createElement("img");
+      const div20 = document.createElement("div");
+      const span20 = document.createElement("span");
+      const div21 = document.createElement("div");
+      const td21 = document.createElement("td");
+      const div22 = document.createElement("div");
+      const td22 = document.createElement("td");
+      const div23 = document.createElement("div");
+      const td23 = document.createElement("td");
+      const div24 = document.createElement("div");
+      const td24 = document.createElement("td");
+
+      // 3 qator
+      const tr30 = document.createElement("tr");
+      const td30 = document.createElement("td");
+      const img30 = document.createElement("img");
+      const div30 = document.createElement("div");
+      const span30 = document.createElement("span");
+      const div31 = document.createElement("div");
+      const td31 = document.createElement("td");
+      const div32 = document.createElement("div");
+      const td32 = document.createElement("td");
+      const div33 = document.createElement("div");
+      const td33 = document.createElement("td");
+      const div34 = document.createElement("div");
+      const td34 = document.createElement("td");
+
+      // 4 qator
+      const tr40 = document.createElement("tr");
+      const td40 = document.createElement("td");
+      const img40 = document.createElement("img");
+      const div40 = document.createElement("div");
+      const span40 = document.createElement("span");
+      const div41 = document.createElement("div");
+      const td41 = document.createElement("td");
+      const div42 = document.createElement("div");
+      const td42 = document.createElement("td");
+      const div43 = document.createElement("div");
+      const td43 = document.createElement("td");
+      const div44 = document.createElement("div");
+      const td44 = document.createElement("td");
+
+      //    1 qator
+      img10.src = "https://bootdey.com/img/Content/avatar/avatar5.png";
+      img10.className = "imgwidth";
+      td10.className =
+        "responsive-table__body__text responsive-table__body__text--name";
+      tr10.className = "responsive-table__row";
+      span10.className = "status-indicator status-indicator--active";
+      div10.innerHTML = "Developer Zahid";
+      div11.innerHTML = "Active";
+      div11.className = "divm";
+      td11.className =
+        "responsive-table__body__text responsive-table__body__text--status";
+      div12.innerHTML = "Attendee, F1";
+      td12.className =
+        "responsive-table__body__text responsive-table__body__text--types";
+      div13.innerHTML = "Jul 17, 2021, 01:14 PM";
+      td13.className =
+        "responsive-table__body__text responsive-table__body__text--update";
+      div14.innerHTML = "Bangladesh";
+      td14.className =
+        "responsive-table__body__text responsive-table__body__text--country";
+
+      // 2 qator
+      img20.src = "https://bootdey.com/img/Content/avatar/avatar5.png";
+      img20.className = "imgwidth";
+      td20.className =
+        "responsive-table__body__text responsive-table__body__text--name";
+      tr20.className = "responsive-table__row";
+      span20.className = "status-indicator status-indicator--new";
+      div20.innerHTML = "John Doe";
+      div21.innerHTML = "New";
+      div21.className = "divm";
+      td21.className =
+        "responsive-table__body__text responsive-table__body__text--status";
+      div22.innerHTML = "Attendee, F5";
+      td22.className =
+        "responsive-table__body__text responsive-table__body__text--types";
+      div23.innerHTML = "Apr 24, 2021, 11:36 AM";
+      td23.className =
+        "responsive-table__body__text responsive-table__body__text--update";
+      div24.innerHTML = "USA";
+      td24.className =
+        "responsive-table__body__text responsive-table__body__text--country";
+
+      // 3 qator
+      img30.src = "https://bootdey.com/img/Content/avatar/avatar5.png";
+      img30.className = "imgwidth";
+      td30.className =
+        "responsive-table__body__text responsive-table__body__text--name";
+      tr30.className = "responsive-table__row";
+      span30.className = "status-indicator status-indicator--inactive";
+      div30.innerHTML = "Ryan Guill";
+      div31.innerHTML = "Inactive";
+      div31.className = "divm";
+      td31.className =
+        "responsive-table__body__text responsive-table__body__text--status";
+      div32.innerHTML = "Attendee, MSR";
+      td32.className =
+        "responsive-table__body__text responsive-table__body__text--types";
+      div33.innerHTML = "Aug 30, 2021, 05:54 PM";
+      td33.className =
+        "responsive-table__body__text responsive-table__body__text--update";
+      div34.innerHTML = "Canada";
+      td34.className =
+        "responsive-table__body__text responsive-table__body__text--country";
+
+      // 4 qator
+      img40.src = "https://bootdey.com/img/Content/avatar/avatar5.png";
+      img40.className = "imgwidth";
+      td40.className =
+        "responsive-table__body__text responsive-table__body__text--name";
+      tr40.className = "responsive-table__row";
+      span40.className = "status-indicator status-indicator--active";
+      div40.innerHTML = "Dan Broughan";
+      div41.innerHTML = "Active";
+      div41.className = "divm";
+      td41.className =
+        "responsive-table__body__text responsive-table__body__text--status";
+      div42.innerHTML = "Attendee, Instructor, MSR";
+      td42.className =
+        "responsive-table__body__text responsive-table__body__text--types";
+      div43.innerHTML = "Dec 15, 2021, 08:25 AM";
+      td43.className =
+        "responsive-table__body__text responsive-table__body__text--update";
+      div44.innerHTML = "USA";
+      td44.className =
+        "responsive-table__body__text responsive-table__body__text--country";
+
+      //    1 qator
+      td10.appendChild(img10);
+      td10.appendChild(div10);
+      tr10.appendChild(td10);
+      span10.appendChild(div11);
+      td11.appendChild(span10);
+      tr10.appendChild(td11);
+      td12.appendChild(div12);
+      tr10.appendChild(td12);
+      td13.appendChild(div13);
+      tr10.appendChild(td13);
+      td14.appendChild(div14);
+      tr10.appendChild(td14);
+
+      // 2 qator
+      td20.appendChild(img20);
+      td20.appendChild(div20);
+      tr20.appendChild(td20);
+      span20.appendChild(div21);
+      td21.appendChild(span20);
+      tr20.appendChild(td21);
+      td22.appendChild(div22);
+      tr20.appendChild(td22);
+      td23.appendChild(div23);
+      tr20.appendChild(td23);
+      td24.appendChild(div24);
+      tr20.appendChild(td24);
+
+      // 3 qator
+      td30.appendChild(img30);
+      td30.appendChild(div30);
+      tr30.appendChild(td30);
+      span30.appendChild(div31);
+      td31.appendChild(span30);
+      tr30.appendChild(td31);
+      td32.appendChild(div32);
+      tr30.appendChild(td32);
+      td33.appendChild(div33);
+      tr30.appendChild(td33);
+      td34.appendChild(div34);
+      tr30.appendChild(td34);
+
+      // 4 qator
+      td40.appendChild(img40);
+      td40.appendChild(div40);
+      tr40.appendChild(td40);
+      span40.appendChild(div41);
+      td41.appendChild(span40);
+      tr40.appendChild(td41);
+      td42.appendChild(div42);
+      tr40.appendChild(td42);
+      td43.appendChild(div43);
+      tr40.appendChild(td43);
+      td44.appendChild(div44);
+      tr40.appendChild(td44);
+
+      tbody10.appendChild(tr10);
+      tbody10.appendChild(tr20);
+      tbody10.appendChild(tr30);
+      tbody10.appendChild(tr40);
+    </script>
+  </body>
+</html>
